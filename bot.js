@@ -3,7 +3,7 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
     console.log('I am ready!');
-    client.user.setActivity(`.cmds | Na ${client.guilds.size} serwerach!`, {type: "WATCHING"});
+    client.user.setGame("Game");
 });
 
 client.on('message', message => {
