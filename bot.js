@@ -139,7 +139,7 @@ Discord.on('message', function (message) {
 		if (message.content.startsWith('!randomcat') && true){
  const randomcat = 'https://i.imgur.com/jjqKt7t.gifv';
    return message.reply(`here is ur random cat ${randomcat}`) }
-	return randomcat
+   return;
  return 'hi'
 })
 
