@@ -17,7 +17,7 @@ if(args) {
     else if (message.author.bot === false)
       console.log(`[SERWER]: ${message.member.guild} | #${message.channel.name} (${message.author.username}):`, sayMessage);
 
-});
+};
 
 
 
