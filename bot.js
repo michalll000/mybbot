@@ -71,7 +71,7 @@ bot.on("message", async message => {
 
   client.on('message',  function (message) {
   const cat = request.get('https://aws.random.cat/meow');
-   if(message.content === '.cat') {
+   if(message.content === 'm!cat') {
 	cat.then(r => message.reply(r.body.file));
    }
   });
