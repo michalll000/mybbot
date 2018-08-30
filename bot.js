@@ -1,6 +1,9 @@
-let bot = require("discord.js");
-var Discord = new bot.Client();
-const request = require('snekfetch');
+const Discord = require("discord.js");
+const fs = require("fs");
+const api = `dc6zaTOxFJmzC`;
+
+
+const bot = new Discord.Client({disableEveryone: true});
 
 // ThIs EvEnT iS vErY ImPoRtAnT bEcAuSe At ThIs MoMeNt bOt St						aRtS ReCeIvEinG
 
@@ -8,25 +11,14 @@ const request = require('snekfetch');
 
 
 /* eVeRyThInG fRoM tHiS cOrD */
-Discord.on('ready', () => {
-  	console.log(`Logged in as ${Discord.user.tag}!`);
+bot.on('ready', () => {
+  console.log(`[STATUS] Zalogowano jako ${bot.user.tag}!`);
 });
 
-Discord.on(	'guildMemberAdd'	, function		(member) {
-		for (var i = 0; i < 10; i++) {
-												member
-					.client
-			.guilds
-													.get(member.guild.id)
-					.members
-									.get(member.id)
-							
-		.send('Welcome in ' + member.guild.name + '!');
-}
-});
+
 
 
 
 // THIS  MUST  BE  THIS  WAY
-Discord.login(process.env.BOT_TOKEN);
+bot.login(process.env.BOT_TOKEN);
 
