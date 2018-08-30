@@ -5,7 +5,7 @@ const client = new Discord.Client();
 client.on('ready', () => {
     client.user.setStatus('idle')
         console.log("[STATUS] Status załadowany!");
-    client.user.setGame('nope')
+    client.user.setActivity(`.cmds | Na ${client.guilds.size} serwerach!`, {type: "WATCHING"});
         console.log("[STATUS] Szyld załadowany!");
 });
 
