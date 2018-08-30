@@ -58,9 +58,6 @@ bot.on("message", async message => {
     message.channel.send(sayMessage);
 
    }
-// Centrum pomocy
-
-  }
 
 // Pomoc
   if(cmd === `${prefix}admincmds`){
