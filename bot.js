@@ -61,20 +61,27 @@ bot.on("message", async message => {
   let cmd = messageArray[0];
   let args = messageArray.slice(1); //def 1
 
+	if(cmd === `m!admincmds`){
+	    let silikon = bot.user.displayAvatarURL;
+	    let cmda = new Discord.RichEmbed()
+	    .setDescription("TC BOT")
+	    .setColor("#8700ff")
+	    .setThumbnail(silikon)
+	    .addField("Zarządzanie serwerem z TC BOT", "Aby móc zarządzać komendami administratora stwórz rolę 'TC BOT ADMIN' i przydziel ją sobie i administracji serwera.")
+	    .addField("tc!admincmds", "Pokazuje to okno z komendami dla administratorów")
+	    .addField("tc!wyrzuć <powód (opcjonalnie)>", "Wyrzuca osobę ze serwera")
+	    .addField("tc!banuj <powód (opcjonalnie)>", "Wyrzuca i blokuje osobę ze serwera")
+	    .addField("tc!purge <liczba (od 2 do 100)>", "Usuwa podaną liczbę wiadomości z kanału");
+
+	    return message.channel.send(cmda)
+	  }
 
 
 
 
 
 
-
-
-  client.on('message',  function (message) {
-  const cat = request.get('https://aws.random.cat/meow');
-   if(message.content === 'm!cat') {
-	cat.then(r => message.reply(r.body.file));
-   }
-  });
+  
 });
 
 // THIS  MUST  BE  THIS  WAY
