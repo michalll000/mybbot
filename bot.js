@@ -58,10 +58,7 @@ client.on('ready', () => {
 
 
 
-// >>> KOMENDY <<<
-  //if(cmd) {
-    //console.log(`[SERWER]: ${message.member.guild} (${message.author.username}):`, cmd);
-  //};
+
 
 
 
