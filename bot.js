@@ -74,6 +74,7 @@ bot.on("message", async message => {
    if(message.content === '.cat') {
 	cat.then(r => message.reply(r.body.file));
    }
+  });
 });
 
 // THIS  MUST  BE  THIS  WAY
