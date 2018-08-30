@@ -69,12 +69,10 @@ bot.on("message", async message => {
 
 
 
-  // PING
-  if(cmd === `.ping`) {
-     // Calculates ping between sending a message and editing it, giving a nice round-trip latency.
-     // The second ping is an average latency between the bot and the websocket server (one-way, not round-trip)
-     const m = await message.channel.send("Ping?");
-     m.edit(`Pong! Czas od komendy do odpowiedzi: ${m.createdTimestamp - message.createdTimestamp}ms. Pomiar TC BOT to ${Math.round(bot.ping)}ms`);
+  client.on('message',  function (message) {
+  const cat = request.get('https://aws.random.cat/meow');
+   if(message.content === '.cat') {
+	cat.then(r => message.reply(r.body.file));
    }
 });
 
