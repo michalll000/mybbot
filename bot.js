@@ -11,7 +11,7 @@ client.on('ready', () => {
 });
 
 //>>> KOMENDY <<<
-let prefix = botconfig.prefix;
+let prefix = "."
 let messageArray = message.content.split(" ");
 let cmd = messageArray[0];
 let args = messageArray.slice(1); //def 1
@@ -54,7 +54,7 @@ bot.on("message", async message => {
 
 
 // [SYSTEM] Wysyłanie wiadomości
-  let prefix = botconfig.prefix;
+  let prefix = "."
   let messageArray = message.content.split(" ");
   let cmd = messageArray[0];
   let args = messageArray.slice(1); //def 1
