@@ -17,13 +17,14 @@ let messageArray = message.content.split(" ");
 let cmd = messageArray[0];
 let args = messageArray.slice(1); //def 1
 
-if(args) {
-    if(message.author.bot)
-      console.log(`[SERWER]: ${message.member.guild} | #${message.channel.name} ([BOT] ${message.author.username}):`, sayMessage);
-    else if (message.author.bot === false)
-      console.log(`[SERWER]: ${message.member.guild} | #${message.channel.name} (${message.author.username}):`, sayMessage);
+    if(args) {
+        if(message.author.bot)
+          console.log(`[SERWER]: ${message.member.guild} | #${message.channel.name} ([BOT] ${message.author.username}):`, sayMessage);
+        else if (message.author.bot === false)
+          console.log(`[SERWER]: ${message.member.guild} | #${message.channel.name} (${message.author.username}):`, sayMessage);
 
-};
+    };
+});
 
 
 
