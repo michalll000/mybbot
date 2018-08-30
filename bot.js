@@ -11,12 +11,11 @@ client.on('ready', () => {
 });
 
 //>>> KOMENDY <<<
-  if(args) {
+if(args) {
     if(message.author.bot)
       console.log(`[SERWER]: ${message.member.guild} | #${message.channel.name} ([BOT] ${message.author.username}):`, sayMessage);
     else if (message.author.bot === false)
       console.log(`[SERWER]: ${message.member.guild} | #${message.channel.name} (${message.author.username}):`, sayMessage);
-  }
 
 });
 
@@ -42,10 +41,10 @@ client.on('ready', () => {
 
 
 
-// [SYSTEM] Blokowanie używania na priv i przez BOTy
-  bot.on("message", async message => {
-     if(message.author.bot) return;
-     if(message.channel.type === "dm") return;
+// [SYSTEM] Blokowanie używania na priv i przez BOTy0
+bot.on("message", async message => {
+  if(message.author.bot) return;
+  if(message.channel.type === "dm") return;
 
 
 
