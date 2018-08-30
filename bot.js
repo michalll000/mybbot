@@ -43,9 +43,9 @@ client.on('ready', () => {
 
 
 // [SYSTEM] Blokowanie używania na priv i przez BOTy
-bot.on("message", async message => {
-  if(message.author.bot) return;
-  if(message.channel.type === "dm") return;
+  bot.on("message", async message => {
+     if(message.author.bot) return;
+     if(message.channel.type === "dm") return;
 
 
 
@@ -77,3 +77,4 @@ bot.on("message", async message => {
 
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
+
