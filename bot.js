@@ -11,6 +11,11 @@ client.on('ready', () => {
 });
 
 //>>> KOMENDY <<<
+let prefix = botconfig.prefix;
+let messageArray = message.content.split(" ");
+let cmd = messageArray[0];
+let args = messageArray.slice(1); //def 1
+
 if(args) {
     if(message.author.bot)
       console.log(`[SERWER]: ${message.member.guild} | #${message.channel.name} ([BOT] ${message.author.username}):`, sayMessage);
