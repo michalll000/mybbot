@@ -11,6 +11,7 @@ client.on('ready', () => {
 });
 
 //>>> KOMENDY <<<
+bot.on("message", async message => {
 let prefix = "."
 let messageArray = message.content.split(" ");
 let cmd = messageArray[0];
