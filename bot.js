@@ -109,7 +109,7 @@ Discord.on('message', function (message) {
 });
 
 Discord.on('message', 	function(message) {
-    if (msg.content === '!about') {
+    if (message.content === '!about') {
         return message.reply('This is the best bot on planet. Pls upvote');
     }
 });
